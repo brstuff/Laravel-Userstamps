@@ -17,7 +17,7 @@ class Deleting {
         }
 
         if (is_null($model -> {$model -> getDeletedByColumn()})) {
-            $model -> {$model -> getDeletedByColumn()} = auth() -> id();
+            $model -> {$model -> getDeletedByColumn()} = Admin::user()->id;
         }
 
         $model -> save();

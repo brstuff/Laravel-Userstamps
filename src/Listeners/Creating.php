@@ -17,11 +17,11 @@ class Creating {
         }
 
         if (is_null($model -> {$model -> getCreatedByColumn()})) {
-            $model -> {$model -> getCreatedByColumn()} = auth() -> id();
+            $model -> {$model -> getCreatedByColumn()} = Admin::user()->id;
         }
 
         if (is_null($model -> {$model -> getUpdatedByColumn()}) && ! is_null($model -> getUpdatedByColumn())) {
-            $model -> {$model -> getUpdatedByColumn()} = auth() -> id();
+            $model -> {$model -> getUpdatedByColumn()} = Admin::user()->id;
         }
     }
 }

@@ -16,6 +16,6 @@ class Updating {
             return;
         }
 
-        $model -> {$model -> getUpdatedByColumn()} = auth() -> id();
+        $model -> {$model -> getUpdatedByColumn()} = Admin::user()->id;
     }
 }
