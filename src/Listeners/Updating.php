@@ -1,6 +1,7 @@
 <?php
 
 namespace Wildside\Userstamps\Listeners;
+use Encore\Admin\Facades\Admin;
 
 class Updating {
 
